@@ -1,0 +1,113 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(images/sunset.jpg);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f28500;
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+}
+
+main {
+    padding: 40px;
+}
+
+#locationSection {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#inputLocationSearch {
+    width: 30%;
+    color: #333; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+}
+
+#locationSearchButton {
+    width: 30%;
+    color: #fff; 
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#currentLocationButton {
+    flex: 1;
+    max-width: 30%;
+    color: #fff; 
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.containerHeader {
+    font-weight: bold;
+    font-size: 24px; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#dashboard {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+#todayContainer,
+#tomorrowContainer {
+    border: 2px solid #f5f5f5;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#todayContainer img,
+#tomorrowContainer img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+#errorMessage {
+    color: red;
+    margin-top: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #locationSection {
+        flex-direction: column;
+    }
+}
