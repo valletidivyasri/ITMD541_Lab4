@@ -1,16 +1,24 @@
+
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-image: url(images/sunset.jpg);
+    font-family: 'Times New Roman', Times, serif;   
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ecf0f1;
 }
 
 header {
-    background-color: #f28500;
+    background-color: #f4c430;
     color: #000000;
     text-align: center;
     padding: 5px;
+}
+
+.back-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 main {
@@ -34,14 +42,21 @@ main {
     padding: 10px; 
 }
 
-#locationSearchButton {
+#locationSearchButton,
+#currentLocationButton {
     width: 30%;
     color: #fff; 
     background-color: #007bff;
     border: none;
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.locationSearchButton:hover {
+    background-color: #45a049; /* Darker green */
+}
+
 
 #currentLocationButton {
     flex: 1;
@@ -77,7 +92,7 @@ main {
 
 #todayContainer img,
 #tomorrowContainer img {
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
     margin-bottom: 20px;
     text-align: center;
